@@ -25,10 +25,13 @@
                                                 <a-input-password v-model:value="loginInfo.lpassword" />
                                         </a-form-item>
 
+<<<<<<< HEAD
                                         <a-form-item name="remember" :wrapper-col="{ offset: 6, span: 8 }">
                                                 <a-checkbox>记住我</a-checkbox>
                                         </a-form-item>
 
+=======
+>>>>>>> 352cb1d (主页面主体搭建完成)
                                         <a-form-item :wrapper-col="{ offset: 9, span: 15 }">
                                                 <div class="wrapper">
                                                         <button @click="login"> 登录</button>
@@ -66,19 +69,29 @@
                                         </a-form-item>
                                 </a-form>
                         </a-card>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 352cb1d (主页面主体搭建完成)
                 </a-col>
         </a-row>
 </template>
     
 <script setup lang='ts'>
 import { reactive, ref } from 'vue';
+<<<<<<< HEAD
 import { reqLogin, reqRegister } from '@/apis/user';
+=======
+>>>>>>> 352cb1d (主页面主体搭建完成)
 import { message } from 'ant-design-vue';
 import type { FormInstance } from 'ant-design-vue';
 import type { Rule } from 'ant-design-vue/es/form';
 import router from '@/router'
 import { useUserStore } from "@/stores"
+<<<<<<< HEAD
+=======
+import { reqLogin, reqRegister } from '@/apis/user';
+>>>>>>> 352cb1d (主页面主体搭建完成)
 
 const loginRef = ref<FormInstance>();
 const registerRef = ref<FormInstance>();
@@ -86,7 +99,11 @@ const userStore = useUserStore()
 
 type loginInterface = {
         lusername: string,
+<<<<<<< HEAD
         lpassword: string
+=======
+        lpassword: string,
+>>>>>>> 352cb1d (主页面主体搭建完成)
 }
 
 type registerInterface = {
@@ -96,7 +113,10 @@ type registerInterface = {
         phone: string,
         email: string
 }
+<<<<<<< HEAD
 userStore.setToken(1251545)
+=======
+>>>>>>> 352cb1d (主页面主体搭建完成)
 let isLogin = ref<boolean>(true)
 let loginInfo = reactive<loginInterface>({
         lusername: '',
@@ -183,7 +203,12 @@ let login: (event: MouseEvent) => void = () => {
                 if (res.data.code == 200) {
                         message.success("登录成功！")
                         let token: string = res.data.data.token
+<<<<<<< HEAD
                         userStore.setToken(token)
+=======
+                        let newInfo: object = res.data.data.userInfo
+                        userStore.setInfo(token, newInfo)
+>>>>>>> 352cb1d (主页面主体搭建完成)
                         router.push("/")
                 } else {
                         message.error("登录失败！")
@@ -208,7 +233,10 @@ let register: (event: MouseEvent) => void = () => {
                 }
         })
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 352cb1d (主页面主体搭建完成)
 </script>
     
 <style scoped lang="less">

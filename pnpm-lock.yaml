@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+<<<<<<< HEAD
+=======
+  '@ant-design/icons-vue':
+    specifier: ^6.1.0
+    version: 6.1.0(vue@3.3.4)
+>>>>>>> 352cb1d (主页面主体搭建完成)
   ant-design-vue:
     specifier: 4.x
     version: 4.0.0(vue@3.3.4)

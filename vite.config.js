@@ -4,7 +4,10 @@ import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 import vue from '@vitejs/plugin-vue'
 
+<<<<<<< HEAD
 // https://vitejs.dev/config/
+=======
+>>>>>>> 352cb1d (主页面主体搭建完成)
 export default defineConfig({
   plugins: [vue(),
   Components({

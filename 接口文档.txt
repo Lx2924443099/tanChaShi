@@ -6,6 +6,13 @@ type loginInterface = {
 返回值
 data = {
     token,
+<<<<<<< HEAD
+=======
+    userInfo{
+        name,    //用户昵称，未设置则使用用户名
+        avatar   //用户头像地址，无则为空（使用默认头像）
+    },
+>>>>>>> 352cb1d (主页面主体搭建完成)
     code  //状态码，200为成功
 }
 
