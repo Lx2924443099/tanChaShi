@@ -1,0 +1,24 @@
+登录 /user/login
+type loginInterface = {
+        lusername: string,
+        lpassword: string
+}
+返回值
+data = {
+    token,
+    code  //状态码，200为成功
+}
+
+
+注册 /user/register
+type registerInterface = {
+        rusername: string,
+        rpassword: string,
+        checkPassword: string,
+        phone: string,
+        email: string
+}
+返回值
+data = {
+    code  //状态码，200为成功
+}
