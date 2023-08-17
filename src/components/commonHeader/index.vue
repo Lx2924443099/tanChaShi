@@ -24,7 +24,7 @@
         </div>
 
         <div class="right">
-            <a-button type="text" size="normal" :icon="h(HomeOutlined)">首页</a-button>
+            <a-button type="text" size="normal" :icon="h(HomeOutlined)" @click="toHome">首页</a-button>
             <a-tooltip color="#546de5">
                 <a-button type="text" size="normal" :icon="h(BulbOutlined)">
                 </a-button>
@@ -64,9 +64,8 @@
 import { h, ref } from 'vue';
 import { BulbOutlined, CommentOutlined, HomeOutlined } from '@ant-design/icons-vue';
 import { useUserStore } from '@/stores';
-import { useRouter } from "vue-router";
+import router from "@/router";
 
-const router = useRouter()
 const props = defineProps(['selectSurvey'])
 const surveyId = ref<string>('')
 const userStore = useUserStore()
@@ -81,6 +80,9 @@ let logOut: (event: MouseEvent) => void = () => {
     router.push('/login')
 }
 
+const toHome = () => {
+    router.push('/allSurvey')
+}
 </script>
     
 <style scoped lang="less">

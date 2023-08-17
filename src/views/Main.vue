@@ -1,27 +1,10 @@
 <template>
-<<<<<<< HEAD
-    <p>欢迎来到探查师</p>
-</template>
-    
-<script setup lang='ts'>
-
-</script>
-    
-<style></style>
-=======
     <a-layout>
         <a-layout-header :style="headerStyle">
             <commonHeader :selectSurvey="selectSurvey" />
         </a-layout-header>
         <a-layout>
-            <a-layout-sider width="20vw">
-                <a-button type="primary" style="width: 15vw;height: 6vh;">+ 创建问卷</a-button>
-                <a-menu v-model:selectedKeys="selectedKeys" style="width: 15vw;margin-top: 15px;height: 60vh;"
-                    mode="vertical" :items="items" @click="handleClick" />
-            </a-layout-sider>
-            <a-layout-content>
-                <router-view></router-view>
-            </a-layout-content>
+            <router-view></router-view>
         </a-layout>
         <a-layout-footer :style="footerStyle">
             <img src="@/assets/logo.png" alt="">
@@ -52,22 +35,7 @@ const selectSurvey = (value: string) => {
     selectId.value = value
 }
 
-const selectedKeys = ref(['1']);
 
-const items = [
-    {
-        key: '1',
-        label: '全部问卷',
-        title: '全部问卷',
-    },
-    {
-        key: '2',
-        label: '我的收藏',
-        title: '我的收藏',
-    }
-]
-
-let handleClick = () => { }
 </script>
     
 <style scoped lang="less">
@@ -112,18 +80,7 @@ let handleClick = () => { }
         margin-top: 5vh;
         width: 90vw;
         margin-left: 5vw;
-
-        .ant-layout-sider {
-            min-width: 50px;
-            width: 10%;
-            background-color: #f5f5f5;
-        }
-
-        .ant-layout-content {
-            background-color: #f5f5f5;
-        }
     }
 
 }
 </style>
->>>>>>> 352cb1d (主页面主体搭建完成)
